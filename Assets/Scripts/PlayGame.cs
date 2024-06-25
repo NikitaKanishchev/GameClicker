@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class PlayGame : MonoBehaviour
 {
+    public ClickEffect clickEffect;
+    
     [SerializeField] private int money;
     private int currentMoney;
     private int hitPower;
@@ -33,10 +35,11 @@ public class PlayGame : MonoBehaviour
     public void Start()
     {
         UpdateMoneyText();
-        
+        LoadGame();
+        UpdateButtonStates();
+
         money = PlayerPrefs.GetInt("Money");
-        hitPower = 1;
-        
+
         levelBarFront.fillAmount = exp / expNextLevel;
         levelBarBack.fillAmount = exp / expNextLevel;
     }
@@ -52,6 +55,8 @@ public class PlayGame : MonoBehaviour
             level++;
             exp = 0;
             expNextLevel *= 2;
+            
+            SaveGame();
         }
 
         if (hitPower > 2 && hitPower < 3)
@@ -65,15 +70,18 @@ public class PlayGame : MonoBehaviour
     public void AddMoney()
     {
         money += hitPower;
-        moneyText.text = "Money:  " + money;
+        moneyText.text = "" + money;
         exp++;
+        
+        clickEffect.Poke();
 
         plusObject.SetActive(false);
-        plusObject.transform.position = new Vector3(Random.Range(465, 645 + 1), Random.Range(745, 945 + 1), 0);
+        plusObject.transform.position = new Vector3(Random.Range(465, 645 + 1), Random.Range(785, 985 + 1), 0);
         plusObject.SetActive(true);
 
         StopAllCoroutines();
         StartCoroutine(Fly());
+        SaveGame();
     }
 
     public void Initialize(int startingLevel, float startingExperience)
@@ -91,6 +99,7 @@ public class PlayGame : MonoBehaviour
             hitPower += 1;
             moneyText.text = money.ToString();
             buttonBusiness.gameObject.SetActive(false);
+            SaveGame();
         }
         else
         {
@@ -106,7 +115,7 @@ public class PlayGame : MonoBehaviour
             hitPower += 2;
             moneyText.text = money.ToString();
             buttonStartup.gameObject.SetActive(false);
-            
+            SaveGame();
         }
         else
         {
@@ -128,7 +137,39 @@ public class PlayGame : MonoBehaviour
     {
         levelBarFront.fillAmount = exp / expNextLevel;
     }
-
+    
+    private void SaveGame()
+    {
+        PlayerPrefs.SetInt("Money", money);
+        PlayerPrefs.SetInt("HitPower", hitPower);
+        PlayerPrefs.SetInt("Level", level); 
+        PlayerPrefs.SetFloat("Experience", exp); 
+        PlayerPrefs.SetFloat("LevelBarFill", levelBarFront.fillAmount);
+        
+        PlayerPrefs.SetInt("ButtonBusinessActive", buttonBusiness.gameObject.activeSelf ? 1 : 0);
+        PlayerPrefs.SetInt("ButtonStartupActive", buttonStartup.gameObject.activeSelf ? 1 : 0);
+        
+        PlayerPrefs.Save();
+    }
+    
+    private void LoadGame()
+    {
+        money = PlayerPrefs.GetInt("Money", 0);
+        hitPower = PlayerPrefs.GetInt("HitPower", 1);
+        level = PlayerPrefs.GetInt("Level", 1);
+        exp = PlayerPrefs.GetFloat("Experience", 0f);
+        levelBarFront.fillAmount = PlayerPrefs.GetFloat("LevelBarFill", 0f);
+        
+        buttonBusiness.gameObject.SetActive(PlayerPrefs.GetInt("ButtonBusinessActive", 1) == 1);
+        buttonStartup.gameObject.SetActive(PlayerPrefs.GetInt("ButtonStartupActive", 1) == 1);
+    }
+    
+    private void UpdateButtonStates()
+    {
+        buttonBusiness.interactable = hitPower <= 1; 
+        buttonStartup.interactable = hitPower <= 2; 
+    }
+    
     private IEnumerator Fly()
     {
         for (int i = 0; i <= 19; i++)
@@ -141,3 +182,4 @@ public class PlayGame : MonoBehaviour
         plusObject.SetActive(false);
     }
 }
+
