@@ -15,7 +15,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="LoadScene.cs" t="Include" />
+          <e p="PlayerXP.cs" t="Include" />
           <e p="PlayGame.cs" t="Include" />
+          <e p="ShopItem.cs" t="Include" />
+          <e p="ShopManager.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

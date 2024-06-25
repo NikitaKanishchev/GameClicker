@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5ad2ec5-7ccf-4910-a9b7-d2a0eb0896b6" name="Default Changelist" comment="" />
+    <list default="true" id="d5ad2ec5-7ccf-4910-a9b7-d2a0eb0896b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameClicker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameClicker/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameClicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameClicker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +18,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.adaptiveperformance@5.1.0/Runtime/Core/AdaptiverPerformanceLog.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShopManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShopItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../StrickBang/Assets/Scripts/HealthBar/PlayerHealth.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../StrickBang/Assets/Scripts/HealthBar/PlayerXP.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerXp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadScene.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -19,6 +31,10 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerXP.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerXp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ShopItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ShopManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayGame.cs" />
       </list>
     </option>
@@ -69,7 +85,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719235798481</updated>
-      <workItem from="1719235799809" duration="3147000" />
+      <workItem from="1719235799809" duration="3349000" />
+      <workItem from="1719249475899" duration="5450000" />
+      <workItem from="1719257075784" duration="2611000" />
+      <workItem from="1719302686157" duration="8209000" />
     </task>
     <servers />
   </component>
@@ -80,5 +99,19 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1521" height="744" key="VCS.FileHistoryDialog" timestamp="1719258978261">
+      <screen x="0" y="0" width="1707" height="929" />
+    </state>
+    <state x="93" y="93" width="1521" height="744" key="VCS.FileHistoryDialog/0.0.1707.929@0.0.1707.929" timestamp="1719258978261" />
+    <state x="671" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1719305939176">
+      <screen x="0" y="0" width="1707" height="929" />
+    </state>
+    <state x="671" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.929@0.0.1707.929" timestamp="1719305939176" />
+    <state x="516" y="198" width="672" height="678" key="search.everywhere.popup" timestamp="1719308729914">
+      <screen x="0" y="0" width="1707" height="929" />
+    </state>
+    <state x="516" y="198" width="672" height="678" key="search.everywhere.popup/0.0.1707.929@0.0.1707.929" timestamp="1719308729914" />
   </component>
 </project>
