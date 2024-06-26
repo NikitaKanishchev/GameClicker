@@ -13,7 +13,7 @@ public class ClickEffect : MonoBehaviour
         
         transform.DOScale(originalScale * (1 + punchScale), punchDuration)
             .SetEase(punchEase)
-            .SetLoops(2, LoopType.Yoyo); // Анимируем туда и обратно
+            .SetLoops(2, LoopType.Yoyo); 
     }
 }
 
